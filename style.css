@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --accent: #6366f1;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #020617;
+    color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Slider */
+.movie-slider {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+}
+.movie-slider::-webkit-scrollbar {
+    display: none; 
+}
+
+.movie-card {
+    flex: 0 0 280px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Rating Stars */
+.star-rating .star {
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+.star-rating .star:hover {
+    transform: scale(1.2);
+}
+.star.active {
+    color: #fbbf24;
+    fill: #fbbf24;
+}
+
+/* Modal Animation */
+#movieModal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* ===============================
+   DEFAULT (Large Desktop 1200px+)
+   Already handled by your base CSS
+================================ */
+
+/* =================================
+   LARGE DESKTOP / BIG SCREENS
+   1400px and above
+================================= */
+
+@media (min-width: 1400px) {
+
+    .movie-card {
+        flex: 0 0 320px;
+    }
+
+    .movie-slider {
+        gap: 2rem;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+}
+
+/* =================================
+   DESKTOP / LAPTOP
+   1024px – 1399px
+================================= */
+
+@media (max-width: 1399px) {
+
+    .movie-card {
+        flex: 0 0 260px;
+    }
+
+    .movie-slider {
+        gap: 1.4rem;
+    }
+
+}
+
+/* =================================
+   TABLET LANDSCAPE
+   768px – 1023px
+================================= */
+
+@media (max-width: 1023px) {
+
+    .movie-card {
+        flex: 0 0 230px;
+    }
+
+    .movie-slider {
+        gap: 1.2rem;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+}
+
+/* =================================
+   TABLET PORTRAIT
+   600px – 767px
+================================= */
+
+@media (max-width: 767px) {
+
+    .movie-card {
+        flex: 0 0 200px;
+    }
+
+    .movie-slider {
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+}
+
+/* --- MOBILE SPECIFIC RESOLUTIONS (Phones < 768px) --- */
+@media (max-width: 767px) {
+    /* 1. Navbar & Search Fix */
+    nav .max-w-7xl {
+        height: auto;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav .relative.flex-1 {
+        width: 100%;
+        max-width: none;
+    }
+
+    #industryFilters {
+        display: flex;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 5px;
+        gap: 1rem;
+    }
+
+    .industry-btn {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    /* 2. Hero Section Scaling */
+    #hero {
+        height: 50vh;
+        padding-top: 2rem;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    /* 3. Movie Cards - Showing 2.5 cards to hint at scrolling */
+    .movie-card {
+        flex: 0 0 140px; 
+    }
+
+    .movie-card .relative {
+        height: 200px;
+    }
+
+    /* 4. The Modal (The big fix for your screenshot) */
+    #movieModal > div {
+        flex-direction: column;
+        width: 95%;
+        max-height: 90vh;
+        margin: auto;
+    }
+
+    /* Left Side (Video/Image Area) */
+    #movieModal .md\:w-1\/2:first-child {
+        width: 100%;
+        height: 220px; /* Fixed height for video on mobile */
+        min-height: 220px;
+    }
+
+    /* Right Side (Details Area) */
+    #movieModal .md\:w-1\/2:last-child {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    #modalTitle {
+        font-size: 1.5rem;
+    }
+
+    /* 5. Video Player & Watch on YouTube Button Fix */
+    #videoContainer iframe {
+        height: 100%;
+    }
+
+    #externalYouTube {
+        padding: 6px 10px;
+        font-size: 8px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #closeVideo {
+        top: 10px;
+        left: 10px;
+        padding: 6px;
+    }
+
+    /* Adjust Starring Tags for Mobile */
+    #modalCast span {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+}
+
+/* Mid-Size Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .movie-card {
+        flex: 0 0 200px;
+    }
+    
+    #hero h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* =================================
+   EXTRA SMALL DEVICES
+   below 360px
+================================= */
+
+@media (max-width: 360px) {
+
+    .movie-card {
+        flex: 0 0 140px;
+    }
+
+    .movie-slider {
+        gap: 0.5rem;
+    }
+
+}
+
+/* --- MOBILE CSS RESOLUTION --- */
+@media (max-width: 767px) {
+    /* Ensure the modal background allows scrolling if content is long */
+    #movieModal {
+        padding: 10px;
+        align-items: flex-start; /* Better for long content on mobile */
+        overflow-y: auto;
+    }
+
+    /* Force the modal box to stack vertically */
+    #movieModal > div {
+        flex-direction: column !important;
+        height: auto !important; /* Allow height to be determined by content */
+        max-height: none !important;
+        width: 100%;
+    }
+
+    /* Fix the Image/Video container size */
+    #movieModal .md\:w-1\/2:first-child {
+        width: 100% !important;
+        height: 250px !important; /* Fixed height so it doesn't crush the text */
+        flex-shrink: 0;
+    }
+
+    /* Fix the Text/Details container */
+    #movieModal .md\:w-1\/2:last-child {
+        width: 100% !important;
+        padding: 20px !important;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Spacing between sections to prevent overlap */
+        overflow: visible !important; /* Prevent text from overriding each other */
+    }
+
+    /* Fix overlapping letters/text */
+    #modalTitle {
+        font-size: 1.75rem !important;
+        line-height: 1.2;
+        margin-bottom: 5px;
+    }
+
+    #modalDesc {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px;
+    }
+
+    /* Stack Cast tags properly so they don't overlap */
+    #modalCast {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #modalCast span {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    /* Adjust the bottom action area */
+    .mt-auto {
+        margin-top: 20px !important;
+        padding-top: 15px !important;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+}
