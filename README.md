@@ -8,7 +8,7 @@ The platform features a **Netflix-style UI**, real-time movie data integration, 
 
 ---
 
-# Live Link : 
+# Live Link : *https://moviehubpro.netlify.app/*
 
 ---
 
