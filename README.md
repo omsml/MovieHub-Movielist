@@ -8,6 +8,10 @@ The platform features a **Netflix-style UI**, real-time movie data integration, 
 
 ---
 
+# Live Link : 
+
+---
+
 # 🚀 Key Features
 
 ## 📡 Real-Time Data Integration
@@ -85,7 +89,7 @@ Features include:
 
 ---
 
-# 📂Get TMDB API Key
+# 📂 Get TMDB API Key
 
 Create an account at
 https://www.themoviedb.org/
@@ -95,14 +99,21 @@ Settings → API
 
 Generate a Read Access Token
 
+---
+
 # 👨‍💻Author
 
 Omm Prakash Samal
+---
 Full Stack Java Developer
 📍 Bhubaneswar, Odisha
 
 Email: ommprakashsamal9@gmail.com
 
+---
+
 # 📜License
 
 This project is licensed under the MIT License.
+
+---
