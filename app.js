@@ -1,5 +1,5 @@
 // --- CONFIGURATION ---
-const TMDB_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNzk2NTg2YzAwNGYyZWYwYjcxMGYwMmEyYzYyNzVjZiIsIm5iZiI6MTc3MzQxMzI1MC42OTQwMDAyLCJzdWIiOiI2OWI0MjM4MjA4ODFhMGMwMGM0YTcwOWQiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.Sz24w_t6ogt81JQ01QqtxDoxAAp0YSBEKfbry0s8jEs';
+const TMDB_TOKEN = '';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 const API_OPTIONS = {
