@@ -91,7 +91,7 @@ Features include:
 
 ---
 
-# 🛠 Technologies Used
+## 🛠 Technologies Used
 
 | Layer | Technologies |
 |------|-------------|
@@ -102,7 +102,7 @@ Features include:
 
 ---
 
-# 📂 Get TMDB API Key
+## 📂 Get TMDB API Key
 
 Create an account at
 https://www.themoviedb.org/
@@ -114,18 +114,19 @@ Generate a Read Access Token
 
 ---
 
-# 👨‍💻Author
+## 👨‍💻Author
 
 Omm Prakash Samal
 ---
 Full Stack Java Developer
+-
 📍 Bhubaneswar, Odisha
 
 Email: ommprakashsamal9@gmail.com
 
 ---
 
-# 📜License
+## 📜License
 
 This project is licensed under the MIT License.
 
