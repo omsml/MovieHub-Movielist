@@ -8,7 +8,20 @@ The platform features a **Netflix-style UI**, real-time movie data integration, 
 
 ---
 
-# Live Link : *https://moviehubpro.netlify.app/*
+## Live Link : *https://moviehubpro.netlify.app/*
+
+###screenshots : 
+<img width="1920" height="894" alt="image" src="https://github.com/user-attachments/assets/3d515cb6-5e3f-4cfd-a217-e6ab78e735c7" />
+<img width="1920" height="882" alt="image" src="https://github.com/user-attachments/assets/86201eae-a9ac-4cb6-9731-4bebe6b953f2" />
+<img width="1920" height="888" alt="image" src="https://github.com/user-attachments/assets/89bd8179-84ad-4b7f-9423-38791e2e5cfa" />
+<img width="1920" height="902" alt="image" src="https://github.com/user-attachments/assets/c31f9344-7198-4d7d-832d-6d723e9408d2" />
+<img width="1920" height="903" alt="image" src="https://github.com/user-attachments/assets/e4b7fb40-96b1-45f8-b80c-fd64e5544960" />
+<img width="1914" height="885" alt="image" src="https://github.com/user-attachments/assets/a35be36d-2262-4f5e-a4b8-6fd21b9af570" />
+<img width="1920" height="878" alt="image" src="https://github.com/user-attachments/assets/1ef7f0b1-66f7-480a-a30d-ba55175193b1" />
+<img width="1920" height="869" alt="image" src="https://github.com/user-attachments/assets/74fcf9d4-205a-4668-b047-e4190e5d7958" />
+<img width="1920" height="878" alt="image" src="https://github.com/user-attachments/assets/0d278637-552c-489d-8eea-1d5bd5528f53" />
+<img width="1920" height="873" alt="image" src="https://github.com/user-attachments/assets/aff46bd8-4325-4d2a-bfcd-93d7730434fe" />
+
 
 ---
 
