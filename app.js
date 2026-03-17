@@ -1,7 +1,4 @@
 // --- CONFIGURATION ---
-const TMDB_TOKEN = '';
-const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
-
 const API_OPTIONS = {
     method: 'GET',
     headers: {
@@ -328,7 +325,10 @@ window.addEventListener('load', initializeData);
 
 document.getElementById('closeModal').onclick = closeModal;
 document.getElementById('closeVideo').onclick = () => {
-    document.getElementById('videoContainer').classList.add('hidden');
+    document.getElementById('videoContainer').classList.add('hidden'); 
     document.getElementById('trailerPlayer').src = "";
 };
 window.onclick = (e) => { if (e.target.id === 'movieModal') closeModal(); };
+
+const TMDB_TOKEN = '';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
